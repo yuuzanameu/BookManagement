@@ -34,5 +34,3 @@ app.listen(5000, () => {
     console.log("server is running at 5000");
 });
 
-// https://github.com/yuuzanameu/BookManagement.git
-
