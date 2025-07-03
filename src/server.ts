@@ -11,6 +11,7 @@ import { deleteBook } from "./routes/books/delete_book_by_id.js";
 import { updateBook } from "./routes/books/update_book_by_id.js";
 import { refresh } from "./routes/refresh.js";
 import { loggingMiddleware } from "./middleware/logger.js";
+import { searchBooks } from "./routes/books/search_by_genre.js";
 
 const app = express();
 app.use(cors());
@@ -27,6 +28,8 @@ app.post("/refresh", refresh);
 app.post("/books", authenticateToken, addBook);
 
 app.get("/books", authenticateToken, listBooks);
+
+app.get("/books/search", authenticateToken, searchBooks);
 
 app.get("/books/:id", authenticateToken, getBookById);
 

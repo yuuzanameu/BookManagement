@@ -12,7 +12,7 @@ export async function getBookById(req: Request, res: Response) {
         );
 
         if (!book) {
-            res.status(404).json({ error: "Book not found" });
+            res.status(404).json({ error: "Book not found, retrieval failed" });
             return;
         }
 

@@ -12,7 +12,9 @@ export async function updateBook(req: Request, res: Response) {
             (book) => book.id === id && book.userId === userId,
         );
         if (bookIndex === -1) {
-            res.status(404).json({ error: "Book not found" });
+            res.status(404).json({
+                error: "Book not found, couldnt update book",
+            });
             return;
         }
 

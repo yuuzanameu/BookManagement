@@ -12,7 +12,7 @@ export async function deleteBook(req: Request, res: Response) {
         );
 
         if (bookIndex === -1) {
-            res.status(404).json({ error: "Book not found" });
+            res.status(404).json({ error: "Book not found, delete failed" });
             return;
         }
 
