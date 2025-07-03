@@ -20,6 +20,8 @@ app.post("/register", register);
 
 app.post("/login", login);
 
+app.post("/refresh", refresh);
+
 // BOOK MANAGEMENT ROUTES
 app.post("/books", authenticateToken, addBook);
 
@@ -30,8 +32,6 @@ app.get("/books/:id", authenticateToken, getBookById);
 app.delete("/books/:id", authenticateToken, deleteBook);
 
 app.put("/books/:id", authenticateToken, updateBook);
-
-app.post("/refresh", refresh);
 
 app.listen(5000, () => {
     console.log("server is running at 5000");
