@@ -60,7 +60,10 @@ http://localhost:5000
 
 ## 🧪 Testing the API
 
-You can test the api, either using the bash scripts in `curl_test/` folder
-or if you want to use postman simply use the curl commands as blueprint to extract the right details
-and plug them into the postman UI.
+You can use the bash scripts in `curl_test/` folder and edit in required details and chmod the scripts to run curl-based tests.
+
+Or you can simply plug in the parameters from the curl command into the postman UI for different routes.
+
+
+
 
