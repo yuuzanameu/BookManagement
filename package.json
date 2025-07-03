@@ -22,7 +22,8 @@
         "express": "^5.1.0",
         "jsonwebtoken": "^9.0.2",
         "uuid": "^11.1.0",
-        "winston": "^3.17.0"
+        "winston": "^3.17.0",
+        "tsc": "^5.7.3"
     },
     "devDependencies": {
         "@types/bcrypt": "^5.0.2",
