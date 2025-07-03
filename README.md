@@ -54,7 +54,7 @@ npm run start
 ```
 
 The server will run on:
-```arduino
+```bash
 http://localhost:5000
 ```
 
@@ -64,6 +64,8 @@ You can use the bash scripts in `curl_test/` folder and edit in required details
 
 Or you can simply plug in the parameters from the curl command into the postman UI for different routes.
 
+## Logs
 
+Logs for each request recording the method and url the req was made to is located in ./logs/requests.log
 
 
