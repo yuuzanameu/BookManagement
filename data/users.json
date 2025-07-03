@@ -1,0 +1,14 @@
+[
+  {
+    "id": "128ecfdf-0933-478a-be70-1c91e7566614",
+    "email": "me@me.com",
+    "password": "$2b$10$LDmdGXL.wSFucVp2SYamZeFdXBzg.1jyQGfCkUITcYDVtfFZh0GGK",
+    "createdAt": "2025-07-03T04:14:42.417Z"
+  },
+  {
+    "id": "d042c426-e4bb-4841-b5ef-b86dfe7750db",
+    "email": "vladi@me.com",
+    "password": "$2b$10$SkhaFKD6MwNjzwBosuMbG.07A/3e3Uz8Nfq26dmJ4HvoAcN/TiEGm",
+    "createdAt": "2025-07-03T07:13:30.625Z"
+  }
+]
