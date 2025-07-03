@@ -31,6 +31,12 @@ A simple RESTful API for managing a bookstore. Built with **Node.js** and **Expr
 - When the access token is invalid or has expired, client can request new access
   token using the refresh token at the /refresh endpoint.
 
+## Requirements
+
+### System Prerequisites
+- **Node.js**: Version 21 or higher
+- **npm**: Version 10.x.x or higher
+
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
