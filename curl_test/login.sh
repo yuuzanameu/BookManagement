@@ -7,9 +7,10 @@ read -r -d '' data <<EOF
 }
 EOF
 
-url="http://localhost:5000/register"
+url="http://localhost:5000/login"
 
 curl -H "Content-Type: application/json" \
      -d "$data" \
      -X POST "$url"
+
 

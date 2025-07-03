@@ -26,8 +26,10 @@ A simple RESTful API for managing a bookstore. Built with **Node.js** and **Expr
 ## 🔐 Authentication
 
 - Users must register and login to access any book-related endpoints.
-- Upon login, a **JWT token** is returned.
-- This token must be sent in the `Authorization` header as a Bearer token:
+- Upon login, two **JWT token** are returned: access token and refresh token.
+- This access token must be sent in the `Authorization` header as a Bearer token:
+- When the access token is invalid or has expired, client can request new access
+  token using the refresh token at the /refresh endpoint.
 
 ## 🚀 Getting Started
 
@@ -47,6 +49,7 @@ npm install
 ### 3. Start the server
 
 ```bash
+npm run build
 npm run start
 ```
 
@@ -55,4 +58,9 @@ The server will run on:
 http://localhost:5000
 ```
 
+## 🧪 Testing the API
+
+You can test the api, either using the bash scripts in `curl_test/` folder
+or if you want to use postman simply use the curl commands as blueprint to extract the right details
+and plug them into the postman UI.
 
