@@ -30,7 +30,7 @@ export async function login(req: Request, res: Response) {
         }
 
         const data: Token_payload = { userId: user.id, email: user.email };
-        const accessToken = jwt.sign(data, JWT_ACCESS, { expiresIn: "1h" });
+        const accessToken = jwt.sign(data, JWT_ACCESS, { expiresIn: "30min" });
         const refreshToken = jwt.sign(data, JWT_REFRESH, { expiresIn: "7d" });
 
         res.status(200).json({

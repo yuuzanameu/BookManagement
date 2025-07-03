@@ -9,6 +9,7 @@ import { listBooks } from "./routes/books/get_books.js";
 import { getBookById } from "./routes/books/get_book_by_id.js";
 import { deleteBook } from "./routes/books/delete_book_by_id.js";
 import { updateBook } from "./routes/books/update_book_by_id.js";
+import { refresh } from "./routes/refresh.js";
 
 const app = express();
 app.use(cors());
@@ -29,6 +30,8 @@ app.get("/books/:id", authenticateToken, getBookById);
 app.delete("/books/:id", authenticateToken, deleteBook);
 
 app.put("/books/:id", authenticateToken, updateBook);
+
+app.post("/refresh", refresh);
 
 app.listen(5000, () => {
     console.log("server is running at 5000");

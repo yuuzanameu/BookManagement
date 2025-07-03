@@ -2,7 +2,6 @@ import jwt from "jsonwebtoken";
 import { Request, Response, NextFunction } from "express";
 
 const JWT_ACCESS = process.env.ACCESS_SECRET || "my-secret-key";
-const JWT_REFRESH = process.env.REFRESH_SECRET || "my-secret-key";
 
 export function authenticateToken(
     req: Request,
@@ -18,7 +17,7 @@ export function authenticateToken(
     }
 
     jwt.verify(token, JWT_ACCESS, (err: any, userdata) => {
-        if (err) {
+        if (err || !userdata) {
             res.status(403).json({ error: "Invalid or expired token" });
             return;
         }
