@@ -10,11 +10,12 @@ import { getBookById } from "./routes/books/get_book_by_id.js";
 import { deleteBook } from "./routes/books/delete_book_by_id.js";
 import { updateBook } from "./routes/books/update_book_by_id.js";
 import { refresh } from "./routes/refresh.js";
+import { loggingMiddleware } from "./middleware/logger.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+app.use(loggingMiddleware);
 // AUTHENTICATION ROUTES
 app.post("/register", register);
 

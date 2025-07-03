@@ -1,5 +1,5 @@
 import winston from "winston";
-import { Request } from "express";
+import { Request, Response, NextFunction } from "express";
 import path from "path";
 
 const logger = winston.createLogger({
@@ -12,7 +12,12 @@ const logger = winston.createLogger({
     ],
 });
 
-export function logRequest(req: Request) {
+export function loggingMiddleware(
+    req: Request,
+    res: Response,
+    next: NextFunction,
+) {
     logger.info(`${req.method} ${req.url}`);
+    next();
 }
 
