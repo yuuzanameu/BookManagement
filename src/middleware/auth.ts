@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import { Request, Response, NextFunction } from "express";
+import { logRequest } from "./logger.js";
 
 const JWT_ACCESS = process.env.ACCESS_SECRET || "my-secret-key";
 
@@ -10,6 +11,7 @@ export function authenticateToken(
 ) {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
+    logRequest(req);
 
     if (!token) {
         res.status(401).json({ error: "Please login first" });

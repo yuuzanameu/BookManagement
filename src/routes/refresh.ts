@@ -20,9 +20,13 @@ export function refresh(req: Request, res: Response) {
             return;
         }
         const data = userdata as Token_payload;
-        const accessToken = jwt.sign(data, JWT_ACCESS, {
-            expiresIn: "30min",
-        });
+        const accessToken = jwt.sign(
+            { userId: data.userId, email: data.email },
+            JWT_ACCESS,
+            {
+                expiresIn: "30min",
+            },
+        );
 
         res.status(200).json({
             message: "New Access token generated",
